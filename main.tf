@@ -9,6 +9,7 @@ data "http" "ipv6" {
 resource "aws_security_group" "cloudflare" {
   name        = "cloudflare-ingress"
   description = "Allow TLS inbound traffic"
+  vpc_id      = var.vpc_id
 
   tags = {
     Name = "cloudflare-ingress"
