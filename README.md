@@ -11,6 +11,12 @@ module "cloudflare-ingress" {
 
 ```
 
+## Outputs
+
+```
+module.cloudflare-ingress.security_group_id
+```
+
 # License
 
 Copyright 2022 opsZero, LLC
