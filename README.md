@@ -6,7 +6,7 @@ Terraform to only allow ingress from [Cloudflare IPs](https://www.cloudflare.com
 
 ```
 module "cloudflare-ingress" {
-   source = "github.com/opszero/cloudflare-aws-security-group//eks"
+   source = "github.com/opszero/cloudflare-aws-security-group"
 }
 
 ```
