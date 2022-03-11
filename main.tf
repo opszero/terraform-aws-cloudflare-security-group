@@ -23,5 +23,5 @@ resource "aws_security_group_rule" "cloudflare" {
   protocol          = "tcp"
   cidr_blocks       = split("\n", data.http.ipv4.body)
   ipv6_cidr_blocks  = split("\n", data.http.ipv6.body)
-  security_group_id = resource.aws_security_group.cloudflare.id
+  security_group_id = aws_security_group.cloudflare.id
 }
