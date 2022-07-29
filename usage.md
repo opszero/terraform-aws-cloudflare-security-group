@@ -1,4 +1,3 @@
-<!-- BEGIN_TF_DOCS -->
 # terraform-aws-cloudflare-security-group
 
 Terraform to only allow ingress from [Cloudflare IPs](https://www.cloudflare.com/ips/)
@@ -52,28 +51,3 @@ terraform apply -auto-approve
 ```sh
 terraform destroy -auto-approve
 ```
-## Providers
-
-| Name | Version |
-|------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | n/a |
-| <a name="provider_http"></a> [http](#provider\_http) | n/a |
-## Inputs
-
-| Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
-| <a name="input_vpc_id"></a> [vpc\_id](#input\_vpc\_id) | The vpc\_id to add the security group into | `string` | `""` | no |
-## Resources
-
-| Name | Type |
-|------|------|
-| [aws_security_group.cloudflare](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group) | resource |
-| [aws_security_group_rule.cloudflare](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group_rule) | resource |
-| [http_http.ipv4](https://registry.terraform.io/providers/hashicorp/http/latest/docs/data-sources/http) | data source |
-| [http_http.ipv6](https://registry.terraform.io/providers/hashicorp/http/latest/docs/data-sources/http) | data source |
-## Outputs
-
-| Name | Description |
-|------|-------------|
-| <a name="output_security_group_id"></a> [security\_group\_id](#output\_security\_group\_id) | n/a |
-<!-- END_TF_DOCS -->
