@@ -21,7 +21,7 @@ resource "aws_security_group_rule" "cloudflare" {
   from_port         = 0
   to_port           = 65535
   protocol          = "tcp"
-  cidr_blocks       = split("\n", data.http.ipv4.body)
-  ipv6_cidr_blocks  = split("\n", data.http.ipv6.body)
+  cidr_blocks       = split("\n", data.http.ipv4.response_body)
+  ipv6_cidr_blocks  = split("\n", data.http.ipv6.response_body)
   security_group_id = aws_security_group.cloudflare.id
 }
